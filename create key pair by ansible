@@ -20,3 +20,7 @@ Playbook for create key-pair using ec2 module.
         name: my_key
         key_material: 'ssh-rsa xxxxx'
         state: present
+
+
+# ansible-playbook <palybook.yaml>
+ Once the playbook executed successfully the key should be create on the perticular region.
