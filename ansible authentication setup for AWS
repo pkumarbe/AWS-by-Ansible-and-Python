@@ -1,0 +1,9 @@
+
+To create a key pair for your project on AWS we need below requirement.
+1. Install boto packages.
+    pip install botocore
+    pip install boto
+2. Set the environmetn varibale for authentication.
+    export AWS_ACCESS_KEY_ID='xxx'
+    export AWS_SECRET_ACCESS_KEY='xx+z'
+    export AWS_REGION="us-east-1"
