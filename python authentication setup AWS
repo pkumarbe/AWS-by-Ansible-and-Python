@@ -1,0 +1,14 @@
+Initial requirement.
+1. Make sure boto3 has been installed.
+
+# pip install boto3
+
+2. Create the requied config fils for authentication and config.
+
+# vi ~/.aws/config
+  [default]
+  region=us-west-1
+# vi ~/.aws/credentials
+  [default]
+  AWS_ACCESS_KEY_ID=xxxx
+  AWS_SECRET_ACCESS_KEY=xxxx+z
