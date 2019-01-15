@@ -1,0 +1,28 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+  - name: create VPC with subnet and routers
+    ec2_vpc:
+      state: present
+      cidr_block: 192.168.0.0/16
+      resource_tags: {"Env":"Devlopment"}
+      region: us-east-1
+      subnets:
+        - cidr: 192.168.1.0/24
+          az: us-east-1a
+          resource_tags: {"Env":"east1a"}
+        - cidr: 192.168.2.0/24
+          az: us-east-1b
+          resource_tags: {"Env":"east1b"}
+      internet_gateway: True
+    register: ec2_vpc_net
+#  - name: create router and add gw
+#      route_tables:
+#        - subnets:
+#          - 192.168.1.0/24
+#          - 192.168.2.0/24
+#          routes:
+#          - dest: 0.0.0.0/0
+
